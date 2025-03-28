@@ -1,0 +1,59 @@
+MutualCrossAttn: true
+MutualCrossAttn_layers:
+- 6
+- 16
+MutualCrossAttn_steps:
+- 0
+- 20
+MutualSelfAttn: true
+MutualSelfAttn_layers:
+- 7
+- 16
+MutualSelfAttn_steps:
+- 0
+- 50
+app_guidance:
+  block_type: spatial
+  blocks:
+  - up_blocks.1
+  - up_blocks.2
+  cross_attn_blocks:
+  - up_blocks.1
+  - up_blocks.2
+  cross_attn_mask_tr_app: 0.3
+  cross_attn_mask_tr_example: 0.2
+  weight_each:
+  - 20000
+  - 10000
+cfg_scale: 7.5
+dreambooth_path: models/DreamBooth_LoRA/realisticVisionV60B1_v51VAE.safetensors
+early_stop_epsilon: 1.0e-05
+function_type: edit
+grad_guidance_scale: 1.0
+grad_guidance_threshold: null
+inversion_prompt: A SUV car drives on a narrow country road with a mountain landscape
+  and greenery in the background.
+model_config: configs/model_config/model_config.yaml
+motion_module: models/Motion_Module/v3_sd15_mm.ckpt
+negative_prompt: ugly, deformed, noisy, blurry, distorted, out of focus, bad anatomy,
+  extra limbs, poorly drawn face, poorly drawn hands, missing fingers
+new_prompt: A Lego car drives on a narrow country road with a mountain landscape and
+  greenery in the background.
+null_inner_steps: 10
+num_inference_step: 50
+number: 14
+prompt_type: long
+score_guide:
+- 0.25
+- 0.25
+- 0.0
+- 0.25
+score_steps: 50
+temp_guidance:
+  blocks:
+  - up_blocks.1
+  - up_blocks.2
+  weight_each:
+  - 20000
+  - 10000
+video_path: resources/car_turn.mp4

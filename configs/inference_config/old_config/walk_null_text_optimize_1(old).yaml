@@ -1,0 +1,47 @@
+# motion module v3_sd15
+
+  motion_module:    "models/Motion_Module/v3_sd15_mm.ckpt"
+  dreambooth_path: "models/DreamBooth_LoRA/realisticVisionV60B1_v51VAE.safetensors"
+
+  model_config: "configs/model_config/model_config.yaml"
+  cfg_scale: 7.5 #7.5 # in default realistic classifer-free guidance
+  negative_prompt: "ugly, deformed, noisy, blurry, distorted, out of focus, bad anatomy, extra limbs, poorly drawn face, poorly drawn hands, missing fingers"
+
+  num_inference_step: 50 # the denosing step for both inversion and inference
+  guidance_step: 5 # the step for guidance in inference
+  warm_up_step: 10 # the warm up step for guidance in inference
+  cool_up_step: 5 # the cool up step for guidance in inference
+  grad_guidance_scale: 1.0 # Gradient guidance scale, it will be multiplied with the weight in each type of guidance; 
+  grad_guidance_threshold: null # Gradient guidance threshold,number or null
+  
+  temp_guidance:
+    weight_each: [20000, 10000] # [20000, 10000]  # [20000, 10000, 8000]
+    blocks:
+      [ 'up_blocks.1', 'up_blocks.2'] # the length of "blocks" must match the length of "weight_each"
+  app_guidance:
+    weight_each: [20000, 10000] # [20000, 10000] # [400, 200] # 400, 200
+    block_type: "spatial" # ["temp","spatial"] # determine the key in which block is used for appearance loss
+    blocks:
+      [ 'up_blocks.1','up_blocks.2'] # the length of "blocks" must match the length of "weight_each"
+
+    cross_attn_blocks:
+      [ 'up_blocks.1','up_blocks.2'] # the mask is only extracted from the "up_blocks.1", which is interpolated for other blocks.
+    cross_attn_mask_tr_example: 0.2 # threshold for mask extraction of example video 
+    cross_attn_mask_tr_app: 0.3  # threshold for mask extraction of appearance video
+# [ 'up_blocks.1', 'up_blocks.2', 'up_blocks.3']
+
+  video_path: 'resources/walk.mp4'
+  inversion_prompt: "A futuristic astronaut in a sleek spacesuit walks through a shallow water landscape filled with glowing alien plants under a dark, ethereal sky." 
+  new_prompt : "A futuristic astronaut in a sleek spacesuit walks through a shallow water landscape filled with glowing alien plants under a dark, ethereal sky." 
+  # inversion_prompt: "A futuristic astronaut in a sleek black and gray spacesuit walks through a shallow, reflective body of water, surrounded by glowing, alien plants with purple and pink hues. The dark, mysterious sky casts an ethereal glow on the otherworldly landscape, while floating orbs illuminate the scene, creating a dreamlike, surreal atmosphere as the astronaut explores this alien world." 
+  # new_prompt : "A futuristic astronaut in a sleek black and gray spacesuit walks through a shallow, reflective body of water, surrounded by glowing, alien plants with purple and pink hues. The dark, mysterious sky casts an ethereal glow on the otherworldly landscape, while floating orbs illuminate the scene, creating a dreamlike, surreal atmosphere as the astronaut explores this alien world." 
+  
+  # 会不会太短了？重建所以和原来一样
+  obj_pairs: ["Astronaut", "Astronaut"] # not required for global motion, such as camera motion
+
+
+  null_inner_steps: 10
+  early_stop_epsilon: 0.00001
+
+  number: "1" 
+  score_guide: [0.25, 0.25, 0.25, 0.25]
