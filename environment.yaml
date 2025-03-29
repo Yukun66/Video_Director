@@ -1,4 +1,4 @@
-name: motionclone
+name: videodirector
 channels:
   - pytorch
   - nvidia

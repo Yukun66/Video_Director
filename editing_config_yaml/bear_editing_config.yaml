@@ -62,7 +62,7 @@ p2p_eq_params_values:
 - 1
 p2p_self_replace_steps: 0.4
 # STDG coeff
-score_guide:
+STDG_guide:
 - 0.5
 - 0.5
 - 0.0

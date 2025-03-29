@@ -666,10 +666,10 @@ class VideoDirectorPipeline(DiffusionPipeline):
             STDG_appearance_fore = self.calculate_STDG_appearance(latent_cur_GT, latent_cur, i, t, cond_embeddings, config, sam_mask)
             STDG_appearance_back = self.calculate_STDG_appearance(latent_cur_GT, latent_cur, i, t, cond_embeddings, config, ~sam_mask)
             
-            STDG = (config.score_guide[0] * STDG_motion_fore + 
-                        config.score_guide[1] * STDG_motion_back + 
-                        config.score_guide[2] * STDG_appearance_fore + 
-                        config.score_guide[3] * STDG_appearance_back)
+            STDG = (config.STDG_guide[0] * STDG_motion_fore + 
+                        config.STDG_guide[1] * STDG_motion_back + 
+                        config.STDG_guide[2] * STDG_appearance_fore + 
+                        config.STDG_guide[3] * STDG_appearance_back)
             STDG_list.append(STDG)
 
             for j in range(config.null_inner_steps):
