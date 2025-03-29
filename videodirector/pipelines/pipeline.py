@@ -775,25 +775,6 @@ class VideoDirectorPipeline(DiffusionPipeline):
                 invert_text_embeddings = repeat(invert_text_embeddings, 'b n c -> (b f) n c', f=video_length)  
                 new_text_embeddings = repeat(new_text_embeddings, 'b n c -> (b f) n c', f=video_length)  
 
-            # register modified forward() method:
-            # if config.MutualSelfAttn: 
-            #     SELF_START_STEP = self.input_config.MutualSelfAttn_steps[0]
-            #     SELF_END_STEP = self.input_config.MutualSelfAttn_steps[1]
-            #     SELF_START_LAYER = self.input_config.MutualSelfAttn_layers[0]
-            #     SELF_END_LAYER = self.input_config.MutualSelfAttn_layers[1]
-            #     selfattn_editor = MutualSelfAttention(start_step=SELF_START_STEP,end_step=SELF_END_STEP, 
-            #                                           start_layer=SELF_START_LAYER, end_layer=SELF_END_LAYER,
-            #                                           sam_masks = self.sam_mask, num_frames=video_length)
-            #     regiter_selfattn_editor_diffusers(self.unet, selfattn_editor)
-            # if config.MutualCrossAttn: 
-            #     CROSS_START_STEP = self.input_config.MutualCrossAttn_steps[0]
-            #     CROSS_END_STEP = self.input_config.MutualCrossAttn_steps[1]
-            #     CROSS_START_LAYER = self.input_config.MutualCrossAttn_layers[0]
-            #     CROSS_END_LAYER = self.input_config.MutualCrossAttn_layers[1]
-            #     crossattn_editor = MutualCrossAttention(start_step=CROSS_START_STEP,end_step=CROSS_END_STEP, 
-            #                                             start_layer=CROSS_START_LAYER, end_layer=CROSS_END_LAYER, )
-            #     regiter_crossattn_editor_diffusers(self.unet, crossattn_editor)
-
             # if config.MutualAttn_p2p: 
             prompts = [self.input_config.inversion_prompt,
                         self.input_config.new_prompt
