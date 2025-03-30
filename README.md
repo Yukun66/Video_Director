@@ -16,12 +16,10 @@ Yulan Guo
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Input Video** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  ***Edited Results***
 <td><img src="__assets__/output.gif"></td>
 
-**VideoDirector** harness the powerful temporal generation capability of the text-to-video (T2V) model for precise video editing. VideoDirector produces results with high quality in terms of accuracy, fidelity, motion smoothness, and realism.For more see the [project webpage](https://yukun66.github.io/VideoDirector/).
 
 ### Abstract
 [//]: # (### Abstract)
->Despite the typical inversion-then-editing paradigm using text-to-image (T2I) models has demonstrated promising results, directly extending it to text-to-video (T2V) models still suffers severe artifacts
-%significant deviations such as color flickering and content distortion. Consequently, current video editing methods primarily rely on T2I models, which inherently lack temporal-coherence generative ability, often resulting in inferior editing results. In this paper, we attribute the failure of the typical editing paradigm to: 1. **Tightly Spatial-temporal Coupling.** The vanilla pivotal-based inversion strategy struggles to disentangle spatial-temporal information in the video diffusion model; 2. **Complicated Spatial-temporal Layout.** The vanilla cross-attention control is deficient in preserving the unedited content. To address these limitations, we propose a spatial-temporal decoupled guidance~(**STDG**) and multi-frame null-text optimization strategy to provide pivotal temporal cues for more precise pivotal inversion. Furthermore, we introduce a self-attention control strategy to maintain higher fidelity for precise partial content editing. Experimental results demonstrate that our method (termed **VideoDirector**) effectively harnesses the powerful temporal generation capabilities of T2V models, producing edited videos with state-of-the-art performance in accuracy, motion smoothness, realism, and fidelity to unedited content. 
+>**VideoDirector** harness the powerful temporal generation capability of the text-to-video (T2V) model for precise video editing. VideoDirector produces results with high quality in terms of accuracy, fidelity, motion smoothness, and realism. For more see the [project webpage](https://yukun66.github.io/VideoDirector/).
 
 
 
