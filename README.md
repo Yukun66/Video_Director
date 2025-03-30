@@ -1,14 +1,11 @@
 # VideoDirector: Precise Video Editing via Text-to-Video Models (CVPR2025)
-## [<a href="https://yukun66.github.io/VideoDirector/" target="_blank">Project Page</a>]
-
-**[VideoDirector: Precise Video Editing via Text-to-Video Models](https://arxiv.org/abs/2411.17592)** 
-</br>
 Yukun Wang, 
 Longguang Wang, 
 Zhiyuan Ma, 
 Qibin Hu, 
 Kai Xu, 
 Yulan Guo (✝Corresponding Author)  
+
 
 [![arXiv](https://img.shields.io/badge/arXiv-VideoDirector-b31b1b.svg)](https://arxiv.org/abs/2411.17592) ![Pytorch](https://img.shields.io/badge/PyTorch->=1.10.0-Red?logo=pytorch)
 
@@ -17,8 +14,10 @@ Yulan Guo (✝Corresponding Author)
 
 [//]: # ([![Hugging Face Spaces]&#40;https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue&#41;]&#40;https://huggingface.co/spaces/weizmannscience/text2live&#41;)
 
-## 🔍 Sample results
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Input Video** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Edited Results***
+### [<a href="https://yukun66.github.io/VideoDirector/" target="_blank">Project Page</a>]
+
+## Edited results
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Input Video** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  ***Edited Results***
 <td><img src="__assets__/output.gif"></td>
 
 **VideoDirector** harness the powerful temporal generation capability of the text-to-video (T2V) model for precise video editing. VideoDirector produces results with high quality in terms of accuracy, fidelity, motion smoothness, and realism.For more see the [project webpage](https://yukun66.github.io/VideoDirector/).
