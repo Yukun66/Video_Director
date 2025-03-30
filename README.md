@@ -7,12 +7,8 @@ Kai Xu,
 Yulan Guo
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-VideoDirector-b31b1b.svg)](https://arxiv.org/abs/2411.17592) ![Pytorch](https://img.shields.io/badge/PyTorch->=1.10.0-Red?logo=pytorch)
+[![arXiv](https://img.shields.io/badge/arXiv-VideoDirector-b31b1b.svg)](https://arxiv.org/abs/2411.17592) ![Pytorch](https://img.shields.io/badge/PyTorch->=2.0.0-Red?logo=pytorch)
 
-
-[//]: # ([![Replicate]&#40;https://replicate.com/cjwbw/multidiffusion/badge&#41;]&#40;https://replicate.com/cjwbw/multidiffusion&#41;)
-
-[//]: # ([![Hugging Face Spaces]&#40;https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue&#41;]&#40;https://huggingface.co/spaces/weizmannscience/text2live&#41;)
 
 ### [<a href="https://yukun66.github.io/VideoDirector/" target="_blank">Project Page</a>]
 
