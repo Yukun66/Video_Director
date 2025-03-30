@@ -60,7 +60,16 @@ models/Motion_Module
 ```
 ## 📌 Preprocess
 ### Mask prediction
-We utilize the SAM2 model (https://github.com/facebookresearch/sam2) to generate masks for our method. The model is located in the SAM2_model directory and requires installation before use:
+We utilize the SAM2 model (https://github.com/facebookresearch/sam2) to generate masks for our method. 
+
+Run the bash file: `SAM2_model/checkpoints/download_ckpts.sh` to download the SAM2 weights:
+```
+cd SAM2_model/checkpoints
+bash download_ckpts.sh
+cd ../..
+```
+
+The SAM2 model is located in the SAM2_model directory and requires installation before use:
 
 
 ```
