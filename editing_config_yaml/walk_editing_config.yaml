@@ -1,0 +1,69 @@
+# model path
+dreambooth_path: models/DreamBooth_LoRA/realisticVisionV60B1_v51VAE.safetensors
+motion_module: models/Motion_Module/v3_sd15_mm.ckpt
+# model config
+model_config: configs/model_config/model_config.yaml
+app_guidance:
+  block_type: spatial
+  blocks:
+  - up_blocks.1
+  - up_blocks.2
+  cross_attn_blocks:
+  - up_blocks.1
+  - up_blocks.2
+  weight_each:
+  - 20000
+  - 10000
+temp_guidance:
+  blocks:
+  - up_blocks.1
+  - up_blocks.2
+  weight_each:
+  - 20000
+  - 10000
+cfg_scale: 7.5
+early_stop_epsilon: 1.0e-05
+grad_guidance_scale: 1.0
+grad_guidance_threshold: null
+# negative prompt
+negative_prompt: ''
+# original prompt
+inversion_prompt: Astronaut walks, a body of water in the background, with growing alien plants that glow, under an ethereal sky
+# editing prompt
+new_prompt: Iron Man walks, a body of water in the background, with growing alien plants that glow, under an ethereal sky
+# null text optmize step
+null_inner_steps: 10
+num_inference_step: 50
+# using ellipse mask or not
+using_ellipse_mask: False
+# using multiframe null text embedding or not
+multiframe_NT: True
+# MutualSelfAttn layers config
+MutualSelfAttn_layers:
+- 7
+- 16
+MutualSelfAttn_steps:
+- 0
+- 50
+p2p_blend_word_base: null
+p2p_blend_word_new: null
+p2p_cross_is_replace_controller: false
+p2p_cross_replace_layers:
+- 0
+- 16
+p2p_cross_replace_steps: 0.8
+# editing key words
+p2p_eq_params_words:
+- Iron
+- Man
+p2p_eq_params_values:
+- 1
+- 1
+p2p_self_replace_steps: 0.4
+# STDG coeff
+STDG_guide:
+- 0.5
+- 1
+- 0.0
+- 0.5
+video_path: resources/walk.mp4

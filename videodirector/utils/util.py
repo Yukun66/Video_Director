@@ -350,10 +350,6 @@ def video_preprocess(config,sample_start_idx=0,sample_frame_rate=None):
 
     video = F.interpolate(video, size=(height, width), mode="bilinear", align_corners=True)
 
-    video_sample = rearrange(video, "(b f) c h w -> b f h w c", f=config.L)
-
-    imageio.mimwrite(f"resources/sample_{video_name}.mp4", video_sample[0], fps=8, quality=9)
-
     video = video / 127.5 - 1.0
 
     return video

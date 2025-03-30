@@ -7,6 +7,8 @@ dependencies:
   - pytorch=2.0.1
   - torchvision=0.15.2
   - pytorch-cuda=11.8
+  - scikit-image
+  - numpy<2
   - pip
   - pip:
     - accelerate
@@ -23,3 +25,5 @@ dependencies:
     - wandb
     - triton
     - opencv-python
+    - huggingface_hub==0.24.5
+    - matplotlib
