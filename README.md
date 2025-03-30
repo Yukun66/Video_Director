@@ -66,7 +66,7 @@ models/Motion_Module
 ```
 ## 📌 Preprocess
 ### Mask prediction
-We utilize the SAM2 model ((https://github.com/facebookresearch/sam2)) to generate masks for our method. The model is located in the SAM2_model directory and requires installation before use:
+We utilize the SAM2 model (https://github.com/facebookresearch/sam2) to generate masks for our method. The model is located in the SAM2_model directory and requires installation before use:
 
 
 ```
