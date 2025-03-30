@@ -4,7 +4,7 @@ Longguang Wang,
 Zhiyuan Ma, 
 Qibin Hu, 
 Kai Xu, 
-Yulan Guo (✝Corresponding Author)  
+Yulan Guo
 
 
 [![arXiv](https://img.shields.io/badge/arXiv-VideoDirector-b31b1b.svg)](https://arxiv.org/abs/2411.17592) ![Pytorch](https://img.shields.io/badge/PyTorch->=1.10.0-Red?logo=pytorch)
