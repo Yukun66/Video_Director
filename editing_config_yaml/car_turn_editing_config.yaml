@@ -28,9 +28,9 @@ grad_guidance_threshold: null
 # negative prompt
 negative_prompt: ''
 # original prompt
-inversion_prompt: A SUV car drives on a narrow country road with a mountain landscape and greenery in the background.
+inversion_prompt: A silver SUV drives on a narrow country road with a mountain landscape and greenery in the background.
 # editing prompt
-new_prompt: A Armored Humvee drives on a narrow country road with a mountain landscape and greenery in the background.
+new_prompt: A LEGO car drives on a narrow country road with a mountain landscape and greenery in the background.
 # null text optmize step
 null_inner_steps: 10
 num_inference_step: 50
@@ -54,11 +54,9 @@ p2p_cross_replace_layers:
 p2p_cross_replace_steps: 0.8
 # editing key words
 p2p_eq_params_words:
-- Armored
-- Humvee
+- LEGO
 p2p_eq_params_values:
-- 2
-- 2
+- 1
 p2p_self_replace_steps: 0.4
 # STDG coeff
 STDG_guide:

@@ -30,7 +30,7 @@ negative_prompt: ugly, deformed, noisy, blurry, distorted, out of focus, bad ana
 # original prompt
 inversion_prompt: A fox is turning head with some trees blurred in the background against a soft blue sky.
 # editing prompt
-new_prompt: A tiger is turning head with some trees blurred in the background against a soft blue sky.
+new_prompt: A Cheetah is turning head with some trees blurred in the background against a soft blue sky.
 # null text optmize step
 null_inner_steps: 10
 num_inference_step: 50
@@ -54,7 +54,7 @@ p2p_cross_replace_layers:
 p2p_cross_replace_steps: 0.8
 # editing key words
 p2p_eq_params_words:
-- tiger
+- Cheetah
 p2p_eq_params_values:
 - 1
 p2p_self_replace_steps: 0.6
