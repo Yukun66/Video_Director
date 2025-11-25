@@ -136,3 +136,16 @@ p2p_self_replace_steps: 0.4
 p2p_cross_replace_steps: 0.8
 ```
 </details>
+
+## 📝 Citation
+
+If you find this work useful, please consider citing:
+
+```bibtex
+@inproceedings{wang2025videodirector,
+  title={Videodirector: Precise video editing via text-to-video models},
+  author={Wang, Yukun and Wang, Longguang and Ma, Zhiyuan and Hu, Qibin and Xu, Kai and Guo, Yulan},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  year={2025}
+}
+```
